@@ -16,12 +16,10 @@ services:
   backend:
     build:
       context: .
-      dockerfile: Dockerfile
     container_name: lm_system_backend
     ports:
       - "8000:8000"
     env_file:
       - .env.example
-
     depends_on:
       - mysql_db
