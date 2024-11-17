@@ -30,9 +30,7 @@ class GoogleTTSService
         // Build the voice request, select the language code and the voice
         $voice = (new VoiceSelectionParams())
             ->setLanguageCode('en-US')
-            ->setSsmlGender(
-                VoiceSelectionParams\SsmlVoiceGender::NEUTRAL
-            );
+            ->setSsmlGender(3); // FOR NEUTRAL # https://github.com/googleapis/google-cloud-php/blob/main/TextToSpeech/src/V1/SsmlVoiceGender.php
 
         // Select the type of audio file to return
         $audioConfig = (new AudioConfig())

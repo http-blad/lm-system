@@ -35,7 +35,7 @@ const LoginPage: Component<{}> = (props) => {
             action={login}
             method="post"
         >
-            <div class="w-1/4 space-y-2.5 col-span-1">
+            <div class="xl:w-1/4 lg:w-1/2 w-full space-y-2.5 col-span-1 p-4">
                 <h4 class="text-center pb-4 scroll-m-20 text-xl font-semibold tracking-tight">
                     Login
                 </h4>
