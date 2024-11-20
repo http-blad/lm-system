@@ -4,6 +4,8 @@ services:
     environment:
       MYSQL_DATABASE: lm_system
       MYSQL_ROOT_PASSWORD: developmentPassword
+    ports:
+      - "3306:3306"
   frontend:
     build:
       context: ./frontend

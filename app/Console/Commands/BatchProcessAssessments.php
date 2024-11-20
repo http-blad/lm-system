@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Services\ChatGPTService;
 use App\Services\PDFConverterService;
-use App\Services\GoogleTTSService;
 use Illuminate\Support\Facades\Log;
 use App\Models\Assessment;
 use App\Models\ProcessedAssessment;
@@ -21,12 +20,11 @@ class BatchProcessAssessments extends Command
     protected $pdfConverterService;
     protected $googleTTSService;
 
-    public function __construct(ChatGPTService $chatGPTService, PDFConverterService $pdfConverterService, GoogleTTSService $googleTTSService)
+    public function __construct(ChatGPTService $chatGPTService, PDFConverterService $pdfConverterService)
     {
         parent::__construct();
         $this->chatGPTService = $chatGPTService;
         $this->pdfConverterService = $pdfConverterService;
-        $this->googleTTSService = $googleTTSService;
     }
 
     public function handle()
